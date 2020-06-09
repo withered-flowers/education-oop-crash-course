@@ -1,0 +1,11 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+theme: jekyll-theme-cayman
+title: Belajar OOP
+baseurl: "education-oop-crash-course"
+url: ""
