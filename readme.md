@@ -5,7 +5,7 @@
 1. [OOP How To](#oop-how-to)
 1. [Method Chaining](#method-chaining)
 1. [Module exports](#module-exports)
-1. [Postlude fs Module](#postlude-fs-module)
+1. [Postlude - fs Module](#postlude---fs-module)
 1. [Reference](#reference)
 
 ## Prelude Object
@@ -532,7 +532,7 @@ samsulS10.swipeLeft("Hello")
   .swipeAll();
 ```
 
-## Postlude fs Module
+## Postlude - fs Module
 Bahan terakhir ...  
 Wuih panjang juga yah ^_^
 
