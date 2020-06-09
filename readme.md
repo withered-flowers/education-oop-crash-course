@@ -181,6 +181,8 @@ let siomayPocoF2 = new Smartphone('DS865', '6 GB', '256 GB');
 console.log(samsulS10);
 console.log(siomayPocoF2);
 
+// Kita panggil method dari class Smartphone pada
+// instance object masing-masing
 console.log(samsulS10.showSpec());
 console.log(siomayPocoF2.showSpec());
 ```
@@ -259,6 +261,7 @@ Misal: Fitur `NFC` dalam suatu `Smartphone` yang kekinian?
 Kalau kita menggunakan class `Smartphone` kita tinggal menambahkan
 sebuah `property` barunya saja di `constructor`
 
+### Code 05
 ```javascript
 class Smartphone {
 // Tinggal tambahkan di constructor dengan default value
@@ -342,7 +345,7 @@ Misalnya pada class `Smartphone` sekarang kita ingin menggunakan `method`
 `swipeLeft` dan `swipeRight` serta sebuah method baru `swipeAll` untuk 
 mencetak `left` dan `right` dengan menggunakan `Method Chaining`
 
-### Code 05
+### Code 06
 ```javascript
 class Smartphone {
   constructor(cpu, memory, storage, isNFCEnabled = false) {
@@ -387,7 +390,7 @@ samsulS10.swipeLeft("Hello")
   .swipeAll();
 ```
 
-### Output 05
+### Output 06
 ```
 TypeError: Cannot read property 'swipeRight' of undefined
 ```
@@ -401,7 +404,7 @@ Tapi apakah yang dikembalikan? cukup dengan mengembalikan `ini` saja.
 
 Kata kunci untuk menggunakan `Method Chaining` adalah `return this`
 
-### Code 06
+### Code 07
 ```javascript
 class Smartphone {
   constructor(cpu, memory, storage, isNFCEnabled = false) {
@@ -448,7 +451,7 @@ samsulS10.swipeLeft("Hello")
   .swipeAll();
 ```
 
-### Output 06
+### Output 07
 ```
 kiri: Hello dan kanan: World
 ```
@@ -466,8 +469,8 @@ folder yang bernama `models`
 
 Contoh:
 
-### Code 07
-```
+### Code 08
+```javascript
 // File: models/Smartphone.js
 class Smartphone {
   constructor(cpu, memory, storage, isNFCEnabled = false) {
@@ -485,20 +488,16 @@ class Smartphone {
 
   swipeLeft(kiri) {
     this.kiri = kiri;
-    // Kembalikan si `ini`
     return this;
   }
 
   swipeRight(kanan) {
     this.kanan = kanan;
-    // Kembalikan si ini
     return this;
   }
 
   swipeAll() {
-    console.log(`kiri: ${this.kiri} dan kanan: ${this.kanan}`);
-    // Apakah masih butuh kembalian?
-    // Tentunya tidak ! karena ini sudah paling terakhir bukan?
+    console.log(`kiri: ${this.kiri} dan kanan: ${this.kanan}`)
   }
 
   showSpec() {
@@ -510,7 +509,7 @@ class Smartphone {
 // adalah si class Smartphone itu sendiri.
 module.exports = Smartphone;
 
-// Bisa juga kita uliskan seperti
+// Bisa juga kita tuliskan seperti
 // module.exports = { Smartphone };
 
 // Bisa juga kita alias-kan
@@ -525,7 +524,6 @@ const Smartphone = require('./models/Smartphone.js');
 
 let samsulS10 = new Smartphone('Ex-nose 9820', '8 GB', '128 GB', true);
 
-// Cara mengunakan method chaining
 samsulS10.swipeLeft("Hello")
   .swipeRight("World")
   .swipeAll();
@@ -561,7 +559,7 @@ Returns: `<string>` or `<Buffer>`
 
 Jadi bagaimanakah cara menggunakannya?
 
-### Code 08
+### Code 09
 ```javascript
 // Di sini kita menggunakan require untuk module fs
 const fs = require('fs');
@@ -574,7 +572,7 @@ let variablePenampungData = fs.readFileSync('susah.csv');
 console.log(variablePenampungData);
 ```
 
-### Output 08
+### Output 09
 ```
 <Buffer 6e 61 6d 61 2c 63 70 75 2c 6d 65 6d 6f 72 79 2c ... 62 more bytes>
 ```
@@ -594,7 +592,7 @@ Untuk encoding ini sendiri, sebenarnya yang bisa digunakan bisa ada banyak
 pilihannya, dapat dilihat pada code di `nodejs` Buffer 
 [ini](https://github.com/nodejs/node/blob/master/lib/buffer.js#L600)
 
-### Code 09
+### Code 10
 ```javascript
 const fs = require('fs');
 
@@ -605,7 +603,7 @@ let variablePenampungData = fs.readFileSync('susah.csv', {
 console.log(variablePenampungData[0]);
 ```
 
-### Output 09
+### Output 10
 ```
 nama,cpu,memory,storage
 Samsul S10,Ex-nose 9820,8 GB,128 GB
