@@ -196,7 +196,6 @@ Misalnya, berdasarkan contoh sebelumnya, kita ingin menambahkan sebuah object
 literal dengan nama samsulS20
 
 ### Code 04
-
 ```javascript
 class Smartphone {
   constructor(cpu, memory, storage) {
@@ -552,15 +551,15 @@ Mari kita coba membedah dokumentasi dari readFileSync ini.
 
 `fs.readFileSync(path[, options])`
 
-* `path` `<string>` | `<Buffer>` | `<URL>` | `<integer>` 
+* `path` `<string>` or `<Buffer>` or `<URL>` or `<integer>` 
   filename or file descriptor
 * `options` `<Object>` | `<string>`
-  * `encoding` `<string>` | `<null>` Default: `null`
+  * `encoding` `<string>` or `<null>` Default: `null`
   * `flag` `<string>` See support of file system flags. Default: `'r'`. 
 
-Returns: `<string>` | `<Buffer>`
+Returns: `<string>` or `<Buffer>`
 
-Jadi bagiamanakah cara menggunakannya?
+Jadi bagaimanakah cara menggunakannya?
 
 ### Code 08
 ```javascript
@@ -590,6 +589,10 @@ Yang direturn adalah buffer, sekarang kita ingin mencoba untuk me-return string
 Bagaimanakah caranya?
 
 Ya, dengan memanfaatkan `options - encoding` nya !
+
+Untuk encoding ini sendiri, sebenarnya yang bisa digunakan bisa ada banyak 
+pilihannya, dapat dilihat pada code di `nodejs` Buffer 
+[ini](https://github.com/nodejs/node/blob/master/lib/buffer.js#L600)
 
 ### Code 09
 ```javascript
