@@ -9,9 +9,9 @@
 1. [Reference](#reference)
 
 ## Prelude Object
-Berdasarkan info statistik dari bankmycell, pada Juni 2020, 44.98% di dunia 
-punya `smartphone`, dan tentunya ini termasuk kita bukan? Jadi mari kita coba 
-lihat, breakdown spesifikasi dari sebuah `smartphone`: 
+Berdasarkan info statistik dari bankmycell, pada tahun 2021, 48.46% orang di 
+dunia memiliki `smartphone`, dan tentunya ini termasuk kita bukan? Jadi mari 
+kita coba lihat, breakdown spesifikasi dari sebuah `smartphone`: 
 
 Smartphone umumnya memiliki: 
 * `CPU` seperti snapdragon atau exynos dsb, 
@@ -623,7 +623,7 @@ Hint:
 `String manipulation` dan `Array manipulation`
 
 ## Reference
-1. [Mobile Phone statistic June 2020, bankmycell](https://www.bankmycell.com/blog/how-many-phones-are-in-the-world)
+1. [Mobile Phone Statistic Feb 2021, bankmycell](https://www.bankmycell.com/blog/how-many-phones-are-in-the-world)
 1. [Object-Oriented Programming, Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming)
 1. [NodeJS - fs - readFileSync](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options)
 1. [NodeJS - encoding support - encodingOps](https://github.com/nodejs/node/blob/master/lib/buffer.js#L600)
