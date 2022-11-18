@@ -7,5 +7,4 @@ include:
   - README.md
 theme: jekyll-theme-cayman
 title: Belajar OOP
-baseurl: "education-oop-crash-course"
-url: ""
+baseurl: "/education-oop-crash-course"
